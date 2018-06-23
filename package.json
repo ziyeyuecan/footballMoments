@@ -17,6 +17,7 @@
     "style-loader": "^0.21.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
     "vux": "^2.9.2"
   },
   "devDependencies": {
