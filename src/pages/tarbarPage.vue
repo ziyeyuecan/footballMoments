@@ -1,5 +1,5 @@
 <template>
-  <div class="homePage">
+  <div class="tarbarPage">
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  .homePage {
+  .tarbarPage {
     .tarbarDiv {
       .weui-tabbar__item {
         text-decoration: none;
