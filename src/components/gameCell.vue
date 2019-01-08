@@ -3,13 +3,13 @@
     <flexbox :gutter="0" class="gameCellFlexbox">
       <flexbox-item :span="4" class="gameCellFlexItem">
         <div class="gameTime">
-          E组第二轮
+          {{ data.date }}
           <br/>
-          20:00
+          {{ data.time }}
         </div>
       </flexbox-item>
       <flexbox-item class="gameCellFlexItem">
-        <div class="gameVerbose">2</div>
+        <div class="gameVerbose">{{ data.teams[0].value }} vs {{ data.teams[1].value }}</div>
       </flexbox-item>
     </flexbox>
   </div>
@@ -22,6 +22,14 @@ export default {
   components: {
     Flexbox,
     FlexboxItem
+  },
+  props: {
+    data: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
   },
   data () {
     return {
@@ -49,6 +57,10 @@ export default {
         .gameVerbose {
           height: 100%;
           background-color: aqua;
+          text-align: center;
+          display: flex;
+          justify-content: center;/*实现水平居中*/
+          align-items:center; /*实现垂直居中*/
         }
       }
     }
